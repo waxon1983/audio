@@ -1,0 +1,3 @@
+fastapi
+uvicorn
+any other packages your project needs...
