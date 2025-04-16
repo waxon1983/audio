@@ -4,6 +4,7 @@ import io
 
 app = FastAPI()
 
+# Health check route for Render
 @app.get("/")
 async def root():
     return {"status": "ok"}
@@ -22,4 +23,3 @@ async def get_audio_duration(file: UploadFile = File(...)):
     
     except Exception as e:
         return {"error": str(e)}
-        
