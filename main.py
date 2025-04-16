@@ -4,6 +4,10 @@ import io
 
 app = FastAPI()
 
+@app.get("/")
+async def root():
+    return {"status": "ok"}
+
 @app.post("/get-duration")
 async def get_audio_duration(file: UploadFile = File(...)):
     try:
@@ -18,4 +22,4 @@ async def get_audio_duration(file: UploadFile = File(...)):
     
     except Exception as e:
         return {"error": str(e)}
-
+        
