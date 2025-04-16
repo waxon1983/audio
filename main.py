@@ -4,8 +4,8 @@ import io
 
 app = FastAPI()
 
-# Health check route for Render
-@app.get("/")
+# Health check route for Render and UptimeRobot
+@app.api_route("/", methods=["GET", "HEAD"])
 async def root():
     return {"status": "ok"}
 
