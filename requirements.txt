@@ -1,5 +1,7 @@
-fastapi
-uvicorn
-pydub
-ffmpeg-python
-python-multipart
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+gunicorn==21.2.0
+pydub==0.25.1
+
+# Optional: If you're not using a custom Docker image and need ffmpeg support
+# python-dotenv==1.0.1   # Uncomment if you use .env files locally
